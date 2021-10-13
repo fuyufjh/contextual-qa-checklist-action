@@ -19241,7 +19241,7 @@ function run() {
             owner: owner,
             repo: repo,
             issue_number: number
-        })).data.find(comment => comment.body.includes(footer));
+        })).data.find(comment => comment.body.includes(footer) && comment.body.includes(header));
         if (applicableChecklistPaths.length > 0) {
             const body = [
                 `${header}\n\n`,
